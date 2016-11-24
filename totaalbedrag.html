@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta http-equiv="content-type"
+                content="text/html;
+                charset=UTF-8">
+        <title>Bereken totaal bedrag</title>
+        <style>
+            #master{
+                background-color: lightslategray;
+                border: solid 1px;
+                height: 170px;
+                width: 283px;
+            }
+            #div3{
+                background-color: darkgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="master">
+            <div id="div1">
+                Bedrag per stuk: <input required type="number" id="bps" value= >       
+            </div>
+            <br>
+            <div id="div2">
+                Aantal: <input required type="number" id="aantal" value= >
+            </div>
+            <br>
+            <button onclick="berekening()">Bereken</button>
+            <br><br>
+            <div id="div3">Totaal=</div>
+        </div>
+        
+        <script>
+            function berekening() {
+                var bps = document.getElementById('bps').value;
+                var aantal = document.getElementById('aantal').value;
+                var totaal = bps * aantal;
+                document.getElementById("div3").innerHTML ="Totaal= "+ totaal;
+            }
+        </script>
+    </body>
+</html>
